@@ -4,7 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack-cli --config webpack.config.js --colors",
+    "start:prod": "node src/server/index.js",
+    "start:dev": "nodemon src/server/index.js --exact babel-node",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif)$": "<rootDir>/src/frontend/__mocks__/fileMock.js",
+      "\\.(scss|sass)$": "<rootDir>/src/frontend/__mocks__/styleMock.js"
+    }
   },
   "keywords": [
     "javascript"
