@@ -1,0 +1,19 @@
+.footer {
+  grid-area: footer;
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+}
+
+.footer a {
+  align-self: center;
+  justify-self: center;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 30px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

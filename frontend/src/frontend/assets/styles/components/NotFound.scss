@@ -1,0 +1,43 @@
+@import '../Vars.scss';
+
+$white-color: #fff;
+$black-color: #000;
+
+.animated {
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: $white-color;
+  }
+  50% {
+    transform: scale(1.1);
+    color: $black-color;
+  }
+  100% {
+    transform: scale(1);
+    color: $white-color;
+  }
+}
+
+.not-found__container {
+  grid-area: content;
+  display: grid;
+  height: 600px;
+}
+
+.not-found {
+  font-size: 100px;
+  text-align: center;
+  color: $white-color;
+}
+.not-found__text {
+  font-size: 25px;
+  text-align: center;
+  color: $white-color;
+}
