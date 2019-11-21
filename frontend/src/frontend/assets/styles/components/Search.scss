@@ -1,27 +1,62 @@
 @import '../Vars.scss';
 
-.main {
+.searchFly-main {
   grid-area: content;
   position: relative;
   background: #f1f1f1;
   margin: 0 auto;
   padding: 10px;
   display: grid;
+  width: 70%;
 }
 
-.input__search {
-  background-color: white;
-  border: 2px solid #f1f1f1;
-  color: black;
-  font-family: $theme-font;
-  font-size: 16px;
-  margin-bottom: 20px;
-  outline: none;
-  padding: 0px 20px;
-  height: 40px;
-  width: 40%;
+.searchFly-container {
+  border: 2px solid black;
+  padding: 10px;
 }
 
-::placeholder {
-  color: black;
+.searchFly-form {
+  font-size: 1.1em;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 400px;
+  width: 60%;
+}
+
+.selectDestinos {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100px;
+}
+
+.selectDate {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100px;
+}
+
+.selectPersonas {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100px;
+}
+
+.searchFly-form select {
+  font-size: 0.8em;
+}
+
+.searchFly-form option {
+  font-size: 1.2em;
 }
