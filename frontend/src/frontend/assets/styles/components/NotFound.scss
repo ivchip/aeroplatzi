@@ -28,7 +28,8 @@ $black-color: #000;
 .not-found__container {
   grid-area: content;
   display: grid;
-  height: 600px;
+  align-content: center;
+  justify-content: center;
 }
 
 .not-found {
