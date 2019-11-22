@@ -6,8 +6,7 @@ const app = express();
 const { config } = require('./config/index');
 
 const authApi = require('./routes/auth');
-//const moviesApi = require('./routes/movies.js');
-//const userMoviesApi = require('./routes/userMovies.js');
+const flightsApi = require('./routes/flights');
 
 const {
   logErrors,
@@ -23,8 +22,7 @@ app.use(helmet());
 
 // routes
 authApi(app);
-//moviesApi(app);
-//userMoviesApi(app);
+flightsApi(app);
 
 // Catch 404
 app.use(notFoundHandler);

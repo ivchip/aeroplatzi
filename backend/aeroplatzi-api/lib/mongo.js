@@ -34,6 +34,7 @@ class MongoLib {
       return db
         .collection(collection)
         .find(query)
+        .sort({arrivalDate: 1})
         .toArray();
     });
   }
