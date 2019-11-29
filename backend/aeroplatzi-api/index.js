@@ -15,8 +15,10 @@ const {
 } = require('./utils/middleware/errorHandlers.js');
 
 const notFoundHandler = require('./utils/middleware/notFoundHandler');
+const cors = require('cors');
 
 // body parser
+app.use(cors());
 app.use(express.json());
 app.use(helmet());
 

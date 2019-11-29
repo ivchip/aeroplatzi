@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
+import { Router } from 'react-router';
+import { createBrowserHistory } from 'history';
 import App from './routes/App';
 import reducer from './reducers';
 
@@ -11,11 +13,17 @@ if (typeof window !== 'undefined') {
   if (process.env.NODE_ENV === 'production') composeEnhacers = compose;
   else composeEnhacers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
   //const preloadedState = window.__PRELOADED_STATE__;
-  const store = createStore(reducer, { user: {}}, composeEnhacers(applyMiddleware(thunk)));
+  const store = createStore(reducer, 
+    { loading: true, error: null, routes: {departure: [], return: []}, user: {}, register: {}},
+    composeEnhacers(applyMiddleware(thunk))
+    );
+  const history = createBrowserHistory();
 
   ReactDOM.render(
     <Provider store={store}>
-      <App />
+      <Router history={history}>
+        <App />
+      </Router>
     </Provider>,
     document.getElementById('app'),
   );

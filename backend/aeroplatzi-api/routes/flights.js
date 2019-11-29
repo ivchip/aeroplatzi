@@ -18,7 +18,7 @@ function flightsApi(app) {
   router.get(
     '/',
     async function(req, res, next) {
-      const { body: search } = req;
+      const { query: search } = req;
       try {
         let query;
         if (search.startDate && search.from && search.to) {
@@ -46,7 +46,7 @@ function flightsApi(app) {
             }
             const flightsReturn = await flightsService.getFlights(query);
             res.status(200).json({
-              routes: {
+              data: {
                 departure: flightsDeparture,
                 return: flightsReturn
               },
@@ -54,13 +54,15 @@ function flightsApi(app) {
             });
           } else {
             res.status(200).json({
-              routes: flightsDeparture,
+              data: flightsDeparture,
               message: 'Flights listed'
             });
           }
         } else {
           res.status(200).json({
-            error: 'Información incompleta'
+            data: {
+              error: 'Información incompleta'
+            }
           });
         }
       } catch (err) {

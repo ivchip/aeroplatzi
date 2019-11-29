@@ -1,0 +1,14 @@
+.flights-container {
+  display: grid;
+  grid-template-rows: 15% 1fr;
+  grid-gap: 2px;
+  align-items: center;
+  justify-items: center;
+}
+.route-header {
+  border-radius: 3px;
+}
+.route-header > h3 {
+  font-size: 15px;
+  width: 600px;
+}

@@ -15,7 +15,9 @@ html, body {
   grid-template: 100px 1fr 50px / 1fr;
   grid-gap: 1px;
   height: 100vh;
-  grid-template-areas: "header" "content" "footer";
+  grid-template-areas: "header"
+                      "content"
+                      "footer";
 }
 
 .button {

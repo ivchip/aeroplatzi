@@ -7,6 +7,14 @@
     "DB_USER": "@aeroplatzi-db-user",
     "DB_PASSWORD": "@aeroplatzi-db-password",
     "DB_HOST": "@aeroplatzi-db-host",
-    "DB_NAME": "@aeroplatzi-db-name"
+    "DB_NAME": "@aeroplatzi-db-name",
+    "AUTH_JWT_SECRET": "@aeroplatzi-auth_jwt_secret",
+    "PUBLIC_API_KEY_TOKEN": "@aeroplatzi-public-api-key-token",
+    "ADMIN_API_KEY_TOKEN": "@aeroplatzi-admin-api-key-token",
+    "MAIL_HOST": "@aeroplatzi-mail-host",
+    "MAIL_PORT": "@aeroplatzi-mail-port",
+    "MAIL_USERNAME": "@aeroplatzi-mail-username",
+    "MAIL_PASSWORD": "@aeroplatzi-mail-password",
+    "MAIL_STARTTLS_ENABLE": "@aeroplatzi-mail-starttls-enable"
   }
 }

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ProTypes from 'prop-types';
-import { loginRequest } from '../actions';
+import { loginUser } from '../actions';
 import googleIcon from '../assets/static/google-icon.png';
 import facebookIcon from '../assets/static/facebook-icon.png';
 import '../assets/styles/components/Login.scss';
@@ -23,8 +23,7 @@ const Login = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.loginRequest(form);
-    props.history.push('/');
+    props.loginUser(form, '/');
   };
 
   return (
@@ -39,6 +38,7 @@ const Login = (props) => {
               type='text'
               placeholder='Correo'
               onChange={handleInput}
+              required
             />
             <input
               className='input__login'
@@ -46,6 +46,7 @@ const Login = (props) => {
               type='password'
               placeholder='Contraseña'
               onChange={handleInput}
+              required
             />
             <button className='button'>Iniciar sesión</button>
             <div className='login__container--remember-me'>
@@ -84,7 +85,7 @@ Login.proTypes = {
 };
 
 const mapDispatchToProps = {
-  loginRequest,
+  loginUser,
 };
 
 export default connect(null, mapDispatchToProps)(Login);
